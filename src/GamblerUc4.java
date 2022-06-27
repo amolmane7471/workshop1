@@ -7,7 +7,7 @@ public class GamblerUc4 {
     System.out.println("UC2 is done");
      result=(Math.random());
      System.out.println(result);
-     for(int day=1;day<=20;day++)
+    for(int day=1;day<=20;day++)
      {
 	if((result>0.5)&&(result<1))
 		{
@@ -15,11 +15,15 @@ public class GamblerUc4 {
 	    stake=stake+50;
 	 for(stake=100;stake<=150;stake++)
 	 {
-	 	    System.out.println("stake="+stake);
+		 
+		 {  
+		 //System.out.println("stake="+stake);
+		 }
+	 }
+		 total=total+stake;	      
+	 		   System.out.println("total amt won in day"+day +" " +total);
 	 	   
-	 	    total=total+stake; 
-	      System.out.println("total amt won in day" +total);
-	 	   }	
+	
 	 }
 	    else
 		{
@@ -27,11 +31,14 @@ public class GamblerUc4 {
 	      stake=stake-bet;
 		 for(stake=99;stake>=50;stake--)
 		 {
-	      System.out.println("stake="+stake);
-	      total=total+stake; 
-	      System.out.println("total amt won in day" +total);
+			
+			 {
+	      //System.out.println("stake="+stake);
 		 }
 		 }
+		 total=total+stake; 
+	      System.out.println("total amt won in day" +day+ " " +total);
+     }
      }
      }
 	}
